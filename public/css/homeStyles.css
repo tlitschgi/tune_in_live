@@ -164,8 +164,9 @@ header {
     font-weight: 600;
     color: var(--text-color);
     display: -webkit-box;
-    line-clamp: 2; /*may need to be -webkit-line-clamp*/
-    -webkit-box-orient: vertical; 
+    line-clamp: 2;
+    /*may need to be -webkit-line-clamp*/
+    -webkit-box-orient: vertical;
     overflow: hidden;
 }
 
