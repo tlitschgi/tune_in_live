@@ -1,0 +1,50 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    {{!-- CSS Link --}}
+    <link rel="stylesheet" href="/css/homeStyles.css" />
+    {{!-- Box Icons --}}
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    {{!-- Header --}}
+    <header>
+      {{!-- Nav --}}
+      <div class="nav container">
+        {{!-- Logo --}}
+        <a href="#" class="logo">Tune<span> IN </span>Live</a>
+        {{!-- Login Button --}}
+        <a href="#" class="login">Login</a>
+      </div>
+    </header>
+    {{!-- Home --}}
+    <section class="home" id="home">
+      <div class="home-text container">
+        <h2 class="home-title">Tune In Live Blog</h2>
+        <span class="home-subtitle">Your source of great content</span>
+      </div>
+    </section>
+    {{!-- Post Filter --}}
+    <div class="post-filter container">
+      <span class="filter-item active-filter" data-filter='all'>All</span>
+      <span class="filter-item" data-filter='popular'>Popular</span>
+      <span class="filter-item" data-filter='near-you'>Near You</span>
+    </div>
+    {{!-- Posts --}}
+    <div class="post-box">
+      <img src="https://placehold.co/600x400" alt="placeholder" class="post-img"> 
+      <h2 class="category">Popular</h2>
+      <a href="guh" class="post-title">
+        This is some cool text
+      </a>
+      <span class="post-date">19 August 2024</span>
+      <p class="post-description">placeholder text placeholder text placeholder text placeholder text placeholder text placeholder text</p>
+      {{!-- Profile --}}
+    </div>
+  </body>
+</html>
