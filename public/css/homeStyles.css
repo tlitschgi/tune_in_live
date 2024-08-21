@@ -38,6 +38,10 @@ section {
     padding: 3rem 0 2rem;
 }
 
+button {
+    all: unset;
+}
+
 header {
     position: fixed;
     top: 0;
@@ -80,7 +84,8 @@ header {
     color: var(--bg-color);
 }
 
-.login:hover {
+.post-dropdown>.dropdown-link:focus,
+.button:hover {
     background: hsl(167, 75%, 45%);
     transition: 0.3s;
 }
@@ -109,25 +114,53 @@ header {
     font-weight: 400;
 }
 
-.post-filter {
+.post-dropdown {
     display: flex;
     justify-content: center;
     align-items: center;
     column-gap: 1.5rem;
     margin-top: 2rem !important;
+    position: relative;
 }
 
-.filter-item {
-    font-size: 0.9rem;
+.dropdown-link {
+    font-size: 1rem;
     font-weight: 500;
     cursor: pointer;
-}
-
-.active-filter {
     background: var(--second-color);
     color: var(--bg-color);
-    padding: 4px 10px;
+    padding: 7px 20px;
     border-radius: 4px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 0.25rem);
+    background-color: white;
+    padding: .75rem;
+    border-radius: .25rem;
+    box-shadow: 0 4px 10px lightgray;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px);
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+.dropdown-menu ul {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(5px, auto));
+    justify-content: center;
+    gap: 0.2rem;
+    align-content: center;
+    align-items: baseline;
+    justify-items: center;
+}
+
+.dropdown-menu:focus,
+.dropdown-link:focus+.dropdown-menu {
+    opacity: 1;
+    transform: translateY(0px);
+    pointer-events: all;
 }
 
 .post {

@@ -5,11 +5,6 @@
     <title>Home Page</title>
     {{! CSS Link }}
     <link rel="stylesheet" href="/css/homeStyles.css" />
-    {{! Box Icons }}
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
   </head>
   <body>
     {{! Header }}
@@ -22,38 +17,34 @@
       </div>
     </section>
     {{! Post Filter }}
-    <div class="post-filter container">
-      <span class="filter-item active-filter" data-filter="all">All</span>
-      <span class="filter-item" data-filter="popular">Popular</span>
-      <span class="filter-item" data-filter="near-you">Near You</span>
+    <div class="post-dropdown container">
+      <button class="dropdown-link button">All Genres</button>
+      <div class="dropdown-menu">
+        <ul>
+          <li><button class="button dropdown-link">All</button></li>
+          <li><button class="button dropdown-link">Blues</button></li>
+          <li><button class="button dropdown-link">Country</button></li>
+          <li><button class="button dropdown-link">Disco</button></li>
+          <li><button class="button dropdown-link">Electronic</button></li>
+          <li><button class="button dropdown-link">Funk</button></li>
+          <li><button class="button dropdown-link">Hip Hop</button></li>
+          <li><button class="button dropdown-link">Jazz</button></li>
+          <li><button class="button dropdown-link">Metal</button></li>
+          <li><button class="button dropdown-link">Pop</button></li>
+          <li><button class="button dropdown-link">Punk</button></li>
+          <li><button class="button dropdown-link">R&B</button></li>
+          <li><button class="button dropdown-link">Rock</button></li>
+        </ul>
+      </div>
     </div>
     {{! Posts }}
-    <section class="post container">
-      {{! Post Box 1 }}
-      <div class="post-box">
-        <img
-          src="https://placehold.co/600x400"
-          alt="placeholder"
-          class="post-img"
-        />
-        <h2 class="category">Popular</h2>
-        <a href="guh" class="post-title">
-          This is some cool text
-        </a>
-        <span class="post-date">19 August 2024</span>
-        <p class="post-description">placeholder text placeholder text
-          placeholder text placeholder text placeholder text placeholder text</p>
-        {{! Profile }}
-        <div class="profile">
-          <img
-            src="https://placehold.co/600x400"
-            alt="placeholder"
-            class="profile-img"
-          />
-          <span class="profile-name">Profile Name</span>
-        </div>
-      </div>
-      {{!-- The rest of the posts will be filled through JavaScript --}}
+    <section class="post container" id="post-section">
+      {{>post}}
+      {{>post}}
+      {{>post}}
+      {{>post}}
+      {{>post}}
     </section>
+    <script src="/js/postFiller.js"></script>
   </body>
 </html>
