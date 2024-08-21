@@ -1,10 +1,10 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-//Set up user table
-class User extends Model {}
+//Set up concert table
+class Concert extends Model {}
 
-User.init(
+Concert.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -12,30 +12,33 @@ User.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    username: {
+    genre_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'genre',
+        key: 'id',
+      },
+    },
+    artist: {
       type: DataTypes.STRING,
       allowNull: false
     },
-    email: {
+    venue: {
       type: DataTypes.STRING,
       allowNull: false
     },
-    first_name: {
+    city: {
       type: DataTypes.STRING,
       allowNull: false
     },
-    last_name: {
+    state: {
       type: DataTypes.STRING,
       allowNull: false
     },
-//    password_hash: {
-//      type: DataTypes.STRING,
-//      allowNull: false
-//    },
-    date_joined: {
+    concert_date: {
       type: DataTypes.DATE,
-      defaultValue: DataTypes.NOW,
-      allowNull: false
+      allowNull: true
     },
   },
   {
@@ -43,8 +46,8 @@ User.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'user',
+    modelName: 'concert',
   }
 );
 
-module.exports = User;
+module.exports = Concert;
