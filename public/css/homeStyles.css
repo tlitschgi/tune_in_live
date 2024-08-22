@@ -156,8 +156,8 @@ header {
     justify-items: center;
 }
 
-.dropdown-menu:focus,
-.dropdown-link:focus+.dropdown-menu {
+.dropdown-menu:focus-within,
+.dropdown-link:focus-within+.dropdown-menu {
     opacity: 1;
     transform: translateY(0px);
     pointer-events: all;

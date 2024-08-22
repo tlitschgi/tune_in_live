@@ -18,7 +18,7 @@
     </section>
     {{! Post Filter }}
     <div class="post-dropdown container">
-      <button class="dropdown-link button">All Genres</button>
+      <button class="dropdown-link button" id="filter">All Genres</button>
       <div class="dropdown-menu">
         <ul>
           <li><button class="button dropdown-link">All</button></li>
@@ -34,6 +34,9 @@
           <li><button class="button dropdown-link">Punk</button></li>
           <li><button class="button dropdown-link">R&B</button></li>
           <li><button class="button dropdown-link">Rock</button></li>
+          {{!-- {{#loop-fill}}
+            {{>button}}
+          {{/loop-fill}} --}}
         </ul>
       </div>
     </div>
@@ -46,5 +49,6 @@
       {{>post}}
     </section>
     <script src="/js/postFiller.js"></script>
+    <script src="/js/dropdown.js"></script>
   </body>
 </html>
