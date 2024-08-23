@@ -1,0 +1,54 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    {{! CSS Link }}
+    <link rel="stylesheet" href="/css/homeStyles.css" />
+  </head>
+  <body>
+    {{! Header }}
+    {{>header}}
+    {{! Home }}
+    <section class="home" id="home">
+      <div class="home-text container">
+        <h2 class="home-title">Tune In Live Blog</h2>
+        <span class="home-subtitle">Your source of great content</span>
+      </div>
+    </section>
+    {{! Post Filter }}
+    <div class="post-dropdown container">
+      <button class="dropdown-link button" id="filter">All Genres</button>
+      <div class="dropdown-menu">
+        <ul>
+          <li><button class="button dropdown-link">All</button></li>
+          <li><button class="button dropdown-link">Blues</button></li>
+          <li><button class="button dropdown-link">Country</button></li>
+          <li><button class="button dropdown-link">Disco</button></li>
+          <li><button class="button dropdown-link">Electronic</button></li>
+          <li><button class="button dropdown-link">Funk</button></li>
+          <li><button class="button dropdown-link">Hip Hop</button></li>
+          <li><button class="button dropdown-link">Jazz</button></li>
+          <li><button class="button dropdown-link">Metal</button></li>
+          <li><button class="button dropdown-link">Pop</button></li>
+          <li><button class="button dropdown-link">Punk</button></li>
+          <li><button class="button dropdown-link">R&B</button></li>
+          <li><button class="button dropdown-link">Rock</button></li>
+          {{!-- {{#loop-fill}}
+            {{>button}}
+          {{/loop-fill}} --}}
+        </ul>
+      </div>
+    </div>
+    {{! Posts }}
+    <section class="post container" id="post-section">
+      {{>post}}
+      {{>post}}
+      {{>post}}
+      {{>post}}
+      {{>post}}
+    </section>
+    <script src="/js/postFiller.js"></script>
+    <script src="/js/dropdown.js"></script>
+  </body>
+</html>
