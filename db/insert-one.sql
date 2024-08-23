@@ -6,3 +6,15 @@ VALUES
 
 -- Select from user table --
 SELECT * FROM user;
+
+-- Insert row into post table --
+INSERT INTO post (id, title, text, date_updated, user_id)
+VALUES
+    ( 2, 'Excited about Def Leapord!',
+     'Cannot not wait to go back in time to the eighties and see Def Leapord!',
+     '08-20-2024', 'tlitschgi')
+;
+
+-- Select from post table --
+SELECT * FROM post
+where id = 1;
