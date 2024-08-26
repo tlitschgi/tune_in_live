@@ -186,8 +186,8 @@ header {
 }
 
 .category {
-    font-size: 0.9rem;
-    font-weight: 500;
+    font-size: 1.1rem;
+    font-weight: 600;
     text-transform: uppercase;
     color: var(--second-color);
 }
@@ -209,6 +209,7 @@ header {
     text-transform: uppercase;
     font-weight: 400;
     margin-top: 4px;
+    margin-bottom: 0.7rem;
 }
 
 .post-description {

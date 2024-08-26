@@ -1,7 +1,11 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
 const path = require("path");
-const hbs = exphbs.create({partialsDir: path.join(__dirname, 'views/partials')});
+const helpers = require("./utils/helpers");
+const hbs = exphbs.create({
+  partialsDir: path.join(__dirname, "views/partials"),
+  helpers,
+});
 
 const app = express();
 const PORT = process.env.PORT || 3001;

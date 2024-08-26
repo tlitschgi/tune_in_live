@@ -1,14 +1,15 @@
 {{! Post Box 1 }}
-<div class="post-box">
+<div class="post-box" id="{{genre}}ID">
+  <h2 class="category">{{genre}}</h2>
   <img src="https://placehold.co/600x400" alt="placeholder" class="post-img" />
-  <h2 class="category">Popular</h2>
   <a href="post" class="post-title">
-    This is some cool text
+    {{venue}}
   </a>
-  <span class="post-date">19 August 2024</span>
-  <p class="post-description">placeholder text placeholder text placeholder text
-    placeholder text placeholder text placeholder text</p>
+  <span>{{city}}, {{state}}</span>
+  {{!-- <p class="post-description">placeholder text placeholder text placeholder text
+    placeholder text placeholder text placeholder text</p> --}}
   {{! Profile }}
+  <span class="post-date">{{date}}</span>
   <div class="profile">
     <img
       src="https://placehold.co/600x400"

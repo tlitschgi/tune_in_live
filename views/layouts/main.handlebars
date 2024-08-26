@@ -18,35 +18,21 @@
     </section>
     {{! Post Filter }}
     <div class="post-dropdown container">
-      <button class="dropdown-link button" id="filter">All Genres</button>
+      <button class="dropdown-link button filter" id="Country">All Genres</button>
       <div class="dropdown-menu">
         <ul>
-          <li><button class="button dropdown-link">All</button></li>
-          <li><button class="button dropdown-link">Blues</button></li>
-          <li><button class="button dropdown-link">Country</button></li>
-          <li><button class="button dropdown-link">Disco</button></li>
-          <li><button class="button dropdown-link">Electronic</button></li>
-          <li><button class="button dropdown-link">Funk</button></li>
-          <li><button class="button dropdown-link">Hip Hop</button></li>
-          <li><button class="button dropdown-link">Jazz</button></li>
-          <li><button class="button dropdown-link">Metal</button></li>
-          <li><button class="button dropdown-link">Pop</button></li>
-          <li><button class="button dropdown-link">Punk</button></li>
-          <li><button class="button dropdown-link">R&B</button></li>
-          <li><button class="button dropdown-link">Rock</button></li>
-          {{!-- {{#loop-fill}}
-            {{>button}}
-          {{/loop-fill}} --}}
+          {{#each genreArray as |genre|}}
+            {{!-- {{#if isEqual genre }} --}}
+            {{>button genre=genre.description}}
+          {{/each}}
         </ul>
       </div>
     </div>
     {{! Posts }}
     <section class="post container" id="post-section">
-      {{>post}}
-      {{>post}}
-      {{>post}}
-      {{>post}}
-      {{>post}}
+      {{#each concertArray as |concert|}}
+        {{>post artist=concert.artist genre=concert.genre.description venue=concert.venue city=concert.city state=concert.state date=concert.concert_date}}
+      {{/each}}
     </section>
     {{{body}}}
     <script src="/js/postFiller.js"></script>
