@@ -1,22 +1,27 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home Page</title>
-    {{! CSS Link }}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    {{! Modal CSS Link }}
+    <link rel="stylesheet" href="/public/css/modalStyle.css">
+    {{! Home Styles CSS Link }}
     <link rel="stylesheet" href="/css/homeStyles.css" />
-  </head>
-  <body>
+</head>
+<body>
     {{! Header }}
     {{>header}}
-    {{! Home }}
+
+    {{! Home Section }}
     <section class="home" id="home">
       <div class="home-text container">
         <h2 class="home-title">Tune In Live Blog</h2>
         <span class="home-subtitle">Your source of great content</span>
       </div>
     </section>
-    {{! Post Filter }}
+
+    {{! Post Filter Dropdown }}
     <div class="post-dropdown container">
       <button class="dropdown-link button filter" id="All">All</button>
       <div class="dropdown-menu">
@@ -28,13 +33,15 @@
         </ul>
       </div>
     </div>
-    {{! Posts }}
+
+    {{! Posts Section }}
     <section class="post container" id="post-section">
       {{#each concertArray as |concert|}}
         {{>post artist=concert.artist genre=concert.genre.description venue=concert.venue city=concert.city state=concert.state date=concert.concert_date image=concert.genre.image}}
       {{/each}}
     </section>
+
     {{{body}}}
     <script src="/js/dropdown.js"></script>
-  </body>
+</body>
 </html>
