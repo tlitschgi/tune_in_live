@@ -31,7 +31,7 @@
     {{! Posts }}
     <section class="post container" id="post-section">
       {{#each concertArray as |concert|}}
-        {{>post artist=concert.artist genre=concert.genre.description venue=concert.venue city=concert.city state=concert.state date=concert.concert_date}}
+        {{>post artist=concert.artist genre=concert.genre.description venue=concert.venue city=concert.city state=concert.state date=concert.concert_date image=concert.genre.image}}
       {{/each}}
     </section>
     {{{body}}}
