@@ -18,11 +18,11 @@
     </section>
     {{! Post Filter }}
     <div class="post-dropdown container">
-      <button class="dropdown-link button filter" id="Country">All Genres</button>
+      <button class="dropdown-link button filter" id="All">All</button>
       <div class="dropdown-menu">
         <ul>
+          <li><button class="button dropdown-link All">All</button></li>
           {{#each genreArray as |genre|}}
-            {{!-- {{#if isEqual genre }} --}}
             {{>button genre=genre.description}}
           {{/each}}
         </ul>
@@ -35,7 +35,6 @@
       {{/each}}
     </section>
     {{{body}}}
-    <script src="/js/postFiller.js"></script>
     <script src="/js/dropdown.js"></script>
   </body>
 </html>
