@@ -1,39 +1,50 @@
 [
     {
-      "description": "Blues"
+      "description": "Blues",
+      "image": "blues.jpg"
     },
     {
-      "description": "Country"
+      "description": "Country",
+      "image": "country.jpg"
     },
     {
-      "description": "Disco"
+      "description": "Disco",
+      "image": "disco.jpg"
     },
     {
-      "description": "Electronic"
+      "description": "Electronic",
+      "image": "electronic.jpg"
     },
     {
-      "description": "Funk"
+      "description": "Funk",
+      "image": "funk.jpg"
     },
     {
-      "description": "Hip hop"
+      "description": "Hip hop",
+      "image": "hip_hop.jpg"
     },
     {
-      "description": "Jazz"
+      "description": "Jazz",
+      "image": "jazz.jpg"
     },
     {
-      "description": "Metal"
+      "description": "Metal",
+      "image": "metal.jpg"
     },
     {
-      "description": "Pop"
+      "description": "Pop",
+      "image": "pop.jpg"
     },
     {
-      "description": "Punk"
+      "description": "Punk",
+      "image": "punk.jpg"
     },
     {
-      "description": "R&B"
+      "description": "R&B",
+      "image": "r&b.jpg"
     },
     {
-      "description": "Rock"
+      "description": "Rock",
+      "image": "rock.jpg"
     }
   ]
-  
