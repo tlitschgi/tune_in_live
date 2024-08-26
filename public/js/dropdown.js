@@ -11,16 +11,16 @@ buttonArray.forEach(function (elem) {
     sort = event.target.textContent;
     filter.textContent = event.target.textContent;
     // sort through post list and figure out what stays and goes.
-    if (event.target.textContent == 'All') {
+    if (event.target.textContent == "All") {
       postArray.forEach(function (post) {
-        post.style.display = 'block';
+        post.style.display = "block";
       });
     } else {
       postArray.forEach(function (post) {
         if (post.id == sort) {
-          post.style.display = 'block';
+          post.style.display = "block";
         } else {
-          post.style.display = 'none';
+          post.style.display = "none";
         }
       });
     }
