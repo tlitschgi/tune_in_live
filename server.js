@@ -17,5 +17,5 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(require("./controllers/homeRoutes"));
 
 app.listen(PORT, () => {
-  console.log("Server listening on: http://localhost:" + PORT);
+  console.log(`http://localhost:${PORT}`);
 });

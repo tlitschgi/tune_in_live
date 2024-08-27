@@ -1,14 +1,14 @@
 {{! Post Box 1 }}
 <div class="post-box" id="{{genre}}">
-  <h2 class="category">{{genre}}</h2>
+  <div class="post-header">
+    <h2 class="category">{{genre}}</h2>
+    <h2 class="category save noselect">☆</h2>
+  </div>
   <img src="/images/{{image}}" alt="{{genre}}" class="post-img" />
   <a href="post" class="post-title">
     {{venue}}
   </a>
   <span>{{city}}, {{state}}</span>
-  {{!-- <p class="post-description">placeholder text placeholder text placeholder text
-    placeholder text placeholder text placeholder text</p> --}}
-  {{! Profile }}
   <span class="post-date">{{date}}</span>
   <div class="profile">
     <img

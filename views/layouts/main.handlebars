@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{title}}</title>
     {{! Modal CSS Link }}
-    <link rel="stylesheet" href="/public/css/modalStyle.css">
+    <link rel="stylesheet" href="/css/modalStyle.css">
     {{! Home Styles CSS Link }}
     <link rel="stylesheet" href="/css/homeStyles.css" />
 </head>
@@ -23,6 +23,7 @@
 
     {{! Post Filter Dropdown }}
     <div class="post-dropdown container">
+      <button class="button">Saved posts</button>
       <button class="dropdown-link button filter" id="All">All</button>
       <div class="dropdown-menu">
         <ul>
@@ -43,5 +44,6 @@
 
     {{{body}}}
     <script src="/js/dropdown.js"></script>
+    <script src="/js/savePost.js"></script>
 </body>
 </html>

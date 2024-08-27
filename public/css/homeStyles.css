@@ -39,7 +39,13 @@ section {
 }
 
 button {
-    all: unset;
+    padding: 8px 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 4px;
+    background: var(--second-color);
+    color: var(--bg-color);
+    border: none;
 }
 
 header {
@@ -124,13 +130,14 @@ header {
 }
 
 .dropdown-link {
-    font-size: 1rem;
+    /* font-size: 1rem;
     font-weight: 500;
-    cursor: pointer;
+    
     background: var(--second-color);
     color: var(--bg-color);
     padding: 7px 20px;
-    border-radius: 4px;
+    border-radius: 4px; */
+    cursor: pointer;
 }
 
 .dropdown-menu {
@@ -236,3 +243,23 @@ header {
     object-position: center;
     border: 2px solid var(--second-color);
 }
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.save {
+    cursor: pointer;
+}
+
+.noselect {
+    /* https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting */
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+  }
