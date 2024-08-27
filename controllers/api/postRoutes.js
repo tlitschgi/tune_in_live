@@ -2,6 +2,9 @@ const router = require('express').Router();
 const { Genre, Concert, Bookmark } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+console.log('cur dir:', __dirname);
+console.log('requireing:', require.resolve('../../models'));
+
 // GET all concerts
 router.get('/', async (req, res) => {
   try {
