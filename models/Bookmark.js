@@ -12,6 +12,14 @@ Bookmark.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    concert_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'concert',
+        key: 'id',
+      },
+    },
     user_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -20,15 +28,7 @@ Bookmark.init(
         key: 'id',
       },
     },
-    post_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: 'post',
-        key: 'id',
-      },
-    },
-    bookmark_date: {
+     bookmark_date: {
       type: DataTypes.DATE,
       defaultValue: DataTypes.NOW,
       allowNull: false
