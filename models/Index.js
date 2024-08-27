@@ -37,3 +37,5 @@ Bookmark.belongsTo(User, {
 });
 
 module.exports = { User, Genre, Concert, Bookmark };
+
+// forcing git to recocgnie name change
