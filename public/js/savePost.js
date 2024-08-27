@@ -13,5 +13,21 @@ saveArray.forEach(function (element) {
       event.target.textContent = "☆";
       // remove from database
     }
+
+    // api code
+    // const postId = button.getAttribute('data-post-id');
+
+    // const response = await fetch('/api/bookmarks', {
+    //     method: 'POST',
+    //     body: JSON.stringify({ post_id: postId }),
+    //     headers: { 'Content-Type': 'application/json' },
+    // });
+
+    // if (response.ok) {
+    //     alert('Post bookmarked successfully!');
+    // } else {
+    //     alert('Failed to bookmark post.');
+    // }
   });
 });
+
