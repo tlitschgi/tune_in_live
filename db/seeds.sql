@@ -2,7 +2,7 @@
 INSERT INTO genre (id, description)
 VALUES
     ( 1, 'Blues'),
-    ( 2, 'Country')
+    ( 2, 'Country'),
     ( 3, 'Disco'),
     ( 4, 'Electronic'),
     ( 5, 'Funk'),
@@ -10,7 +10,7 @@ VALUES
     ( 7, 'Jazz'),
     ( 8, 'Metal'),
     ( 9, 'Pop'),
-    ( 10, 'Punk')
+    ( 10, 'Punk'),
     ( 11, 'R&B'),
     ( 12, 'Rock')
     ;
