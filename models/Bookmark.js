@@ -1,10 +1,10 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-//Set up post table
-class Post extends Model {}
+//Set up bookmark table
+class Bookmark extends Model {}
 
-Post.init(
+Bookmark.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -12,17 +12,13 @@ Post.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    title: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    text: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    date_updated: {
-      type: DataTypes.DATE,
-      allowNull: true
+    concert_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'concert',
+        key: 'id',
+      },
     },
     user_id: {
       type: DataTypes.INTEGER,
@@ -32,14 +28,19 @@ Post.init(
         key: 'id',
       },
     },
+     bookmark_date: {
+      type: DataTypes.DATE,
+      defaultValue: DataTypes.NOW,
+      allowNull: false
+    },
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'post',
+    modelName: 'bookmark',
   }
 );
 
-module.exports = Post;
+module.exports = Bookmark;

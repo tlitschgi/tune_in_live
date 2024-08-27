@@ -6,6 +6,7 @@ let sort = "All";
 
 // place an event listener in each .dropdown-link button
 buttonArray.forEach(function (elem) {
+  
   elem.addEventListener("click", function (event) {
     // I know this isn't a great way to do this, it can be replaced later.
     sort = event.target.textContent;
