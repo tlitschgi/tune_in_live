@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Genre, Concert } = require('../../models');
+const { Genre, Concert, Bookmark } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // GET all concerts
@@ -14,19 +14,22 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.post('/', withAuth, async (req, res) => {
+router.post('/', async (req, res) => {
+  console.log(req.body)
   try {
     const bookmarkData = await Bookmark.create({
       ...req.body,
-      user_id: req.session.user_id,
+      user_id: 1,
     });
 
     res.status(200).json(bookmarkData);
   } catch (err) {
+    console.log(err);
     res.status(400).json(err);
   }
 });
 
+// haven't used delete yet
 router.delete('/:id', withAuth, async (req, res) => {
   try {
     const bookmarkData = await Bookmark.destroy({

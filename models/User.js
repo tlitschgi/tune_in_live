@@ -18,24 +18,24 @@ User.init(
     },
     email: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
     first_name: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
     last_name: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
-//    password_hash: {
-//      type: DataTypes.STRING,
-//      allowNull: false
-//    },
+   password: {
+     type: DataTypes.STRING,
+     allowNull: false
+   },
     date_joined: {
       type: DataTypes.DATE,
       defaultValue: DataTypes.NOW,
-      allowNull: false
+      allowNull: true
     },
   },
   {

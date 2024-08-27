@@ -25,29 +25,29 @@ const loginFormHandler = async (event) => {
 const signupFormHandler = async (event) => {
   event.preventDefault();
 
-  const name = document.querySelector('#name-signup').value.trim();
-  const userid = document.querySelector('#userid-signup').value.trim();
+  const username = document.querySelector('#name-signup').value.trim();
   const password = document.querySelector('#password-signup').value.trim();
 
-  if (name && userid && password) {
-    const response = await fetch('/api/users', {
+  if (username && password) {
+    const response = await fetch('/api/user', {
       method: 'POST',
-      body: JSON.stringify({ name, email, password }),
+      body: JSON.stringify({ username, password }),
       headers: { 'Content-Type': 'application/json' },
     });
 
     if (response.ok) {
-      document.location.replace('/profile');
+      //document.location.replace('/profile');
+      console.log('work yes');
     } else {
       alert(response.statusText);
     }
   }
 };
 
-document
-  .querySelector('.login-form')
-  .addEventListener('submit', loginFormHandler);
+// document
+//   .querySelector('.login-form')
+//   .addEventListener('submit', loginFormHandler);
 
 document
-  .querySelector('.signup-form')
+  .querySelector('#signup-form')
   .addEventListener('submit', signupFormHandler);
